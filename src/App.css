@@ -97,3 +97,7 @@ a {
 	border-radius: 5px;
 	border: 1px solid #000;
 }
+
+button:hover {
+	filter: brightness(90%)
+}

@@ -24,12 +24,9 @@ function App() {
 		setState({...state, bookmarkData: newData});
 	}
 
-	// function to select tag - deselects other tags?
 	const selectTag = tag => {
 		setState({...state, selection: tag});
 	}
-
-	// function to deselect tag
 	
 	return (
     	<div className="App">
