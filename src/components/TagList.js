@@ -1,9 +1,18 @@
-const TagList = () => {
+import Tag from './Tag';
 
-    //const postList = data.map((post, i) => <SidebarPost selectPost={selectPost} key={i} {...post}/>)
+const TagList = ({bookmarkData, selection}) => {
+
+    const bookmarkTags = bookmarkData.map(bookmark => bookmark.tag)
+    const uniqueTags = [...new Set(bookmarkTags)];
+    const tagComponents = uniqueTags.map((tag, i) => <Tag key={i} name={tag}/>)
 
     return (
-        <div></div>
+        <>
+            <h2>Tags</h2>
+            <ul className='tag-list'>
+                {tagComponents}
+            </ul>
+        </>
     )
 }
 

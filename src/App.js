@@ -32,7 +32,7 @@ function App() {
     	<div className="App">
    	   		<section className='sidebar'>
 				<BookmarkForm addBookmark={addBookmark} />
-				<TagList />
+				<TagList {...state}/>
 			</section>
       		<main>
 			  	<BookmarkList {...state} />
