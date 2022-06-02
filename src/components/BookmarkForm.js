@@ -18,16 +18,21 @@ const BookmarkForm = () => {
 
     return (
         <form className='bookmark-form' onSubmit={submitForm}>
-            <label htmlFor="title">Title</label>
-            <input type="text" id="title" onChange={(e) => setState({...state, title: e.target.value})}/>
+            <div className='form-row'>
+                <label htmlFor="title">Title</label>
+                <input type="text" id="title" onChange={(e) => setState({...state, title: e.target.value})}/>
+            </div>
+            <div className='form-row'>
+                <label htmlFor="url">URL</label>
+                <input type="text" id="url" onChange={(e) => setState({...state, url: e.target.value})}/>
+            </div>
 
-            <label htmlFor="url">URL</label>
-            <input type="text" id="url" onChange={(e) => setState({...state, url: e.target.value})}/>
+            <div className="form-row">
+                <label htmlFor="tag">Tag</label>
+                <input type="text" id="tag" onChange={(e) => setState({...state, tag: e.target.value})}/>
+            </div>
 
-            <label htmlFor="tag">Tag</label>
-            <input type="text" id="tag" onChange={(e) => setState({...state, tag: e.target.value})}/>
-
-            <button type="submit"></button>
+            <button type="submit">Add Bookmark</button>
         </form>
     )
 }

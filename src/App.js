@@ -26,9 +26,14 @@ function App() {
 	
 	return (
     	<div className="App">
-   	   		<BookmarkForm />
-      		<TagList />
-      		<BookmarkList />
+   	   		<section className='sidebar'>
+				<BookmarkForm />
+				<TagList />
+			</section>
+      		<main>
+			  	<BookmarkList />
+			</main>
+      		
     	</div>
   	);
 }
