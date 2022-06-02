@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const BookmarkForm = () => {
+const BookmarkForm = ({addBookmark}) => {
     const blank = {
         title: '',
         url: '',
@@ -11,7 +11,7 @@ const BookmarkForm = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
-        // addBookmark()
+        addBookmark(state);
         setState(blank);
         e.target.reset();
     }

@@ -18,7 +18,11 @@ function App() {
 		selection: null
 	})
 
-	// function to create bookmark and add to list
+	const addBookmark = newBookmark => {
+		const newData = state.bookmarkData;
+		newData.push(newBookmark);
+		setState({...state, bookmarkData: newData});
+	}
 
 	// function to select tag - deselects other tags?
 
@@ -27,7 +31,7 @@ function App() {
 	return (
     	<div className="App">
    	   		<section className='sidebar'>
-				<BookmarkForm />
+				<BookmarkForm addBookmark={addBookmark} />
 				<TagList />
 			</section>
       		<main>
