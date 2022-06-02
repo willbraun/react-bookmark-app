@@ -1,11 +1,16 @@
 import Bookmark from './Bookmark';
 
-const BookmarkList = () => {
+const BookmarkList = ({bookmarkData, selection}) => {
 
-    // const postList = data.map((post, i) => <SidebarPost selectPost={selectPost} key={i} {...post}/>)
+    const bookmarkList = bookmarkData.map((bookmark, i) => <Bookmark key={i} {...bookmark}/>)
 
     return (
-        <div></div>
+        <>
+            <h1>Bookmarks</h1>
+            <ul>
+                {bookmarkList}
+            </ul>
+        </>
     )
 }
 

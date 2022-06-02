@@ -1,9 +1,9 @@
-const Bookmark = () => {
-
-    //const postList = data.map((post, i) => <SidebarPost selectPost={selectPost} key={i} {...post}/>)
+const Bookmark = ({title, url}) => {
 
     return (
-        <div></div>
+        <li>
+            <a href={url} target="_blank">{title}</a>
+        </li>
     )
 }
 

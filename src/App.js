@@ -14,7 +14,7 @@ function App() {
 	]
 
 	const [state, setState] = useState({
-		bookmarkList: DATA,
+		bookmarkData: DATA,
 		selection: null
 	})
 
@@ -31,7 +31,7 @@ function App() {
 				<TagList />
 			</section>
       		<main>
-			  	<BookmarkList />
+			  	<BookmarkList {...state} />
 			</main>
       		
     	</div>
