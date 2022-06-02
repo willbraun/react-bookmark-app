@@ -2,7 +2,8 @@ import Bookmark from './Bookmark';
 
 const BookmarkList = ({bookmarkData, selection}) => {
 
-    const bookmarkList = bookmarkData.map((bookmark, i) => <Bookmark key={i} {...bookmark}/>)
+    const filteredList = selection !== null ? bookmarkData.filter(bookmark => bookmark.tag === selection) : bookmarkData;
+    const bookmarkList = filteredList.map((bookmark, i) => <Bookmark key={i} {...bookmark}/>)
 
     return (
         <>

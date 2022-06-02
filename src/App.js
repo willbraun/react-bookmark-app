@@ -25,6 +25,9 @@ function App() {
 	}
 
 	// function to select tag - deselects other tags?
+	const selectTag = tag => {
+		setState({...state, selection: tag});
+	}
 
 	// function to deselect tag
 	
@@ -32,7 +35,7 @@ function App() {
     	<div className="App">
    	   		<section className='sidebar'>
 				<BookmarkForm addBookmark={addBookmark} />
-				<TagList {...state}/>
+				<TagList {...state} selectTag={selectTag}/>
 			</section>
       		<main>
 			  	<BookmarkList {...state} />

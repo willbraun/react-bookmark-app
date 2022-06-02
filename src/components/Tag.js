@@ -1,8 +1,8 @@
-const Tag = ({name}) => {
+const Tag = ({name, selectTag}) => {
 
     return (
         <li>
-            <button type="button">{name}</button>
+            <button type="button" onClick={selectTag(name)}>{name}</button>
         </li>
     )
 }
